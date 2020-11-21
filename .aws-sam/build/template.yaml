@@ -1,0 +1,92 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Rankr-backend
+Transform:
+- AWS::Serverless-2016-10-31
+Resources:
+  SignUp:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/auth/SignUp.handler
+      Runtime: nodejs12.x
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /sign-up
+            Method: POST
+      CodeUri: SignUp
+  LogIn:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/auth/LogIn.handler
+      Runtime: nodejs12.x
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /log-in
+            Method: POST
+      CodeUri: LogIn
+  Refresh:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/auth/Refresh.handler
+      Runtime: nodejs12.x
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /refresh
+            Method: POST
+      CodeUri: Refresh
+  CreateCollection:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/CreateCollection.handler
+      Runtime: nodejs12.x
+      Policies:
+      - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection
+            Method: POST
+      CodeUri: CreateCollection
+  GetCollection:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/GetCollections.handler
+      Runtime: nodejs12.x
+      Policies:
+      - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection
+            Method: GET
+      CodeUri: GetCollection
+  AddToCollection:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/AddToCollection.handler
+      Runtime: nodejs12.x
+      Policies:
+      - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection
+            Method: PUT
+      CodeUri: AddToCollection
+Outputs:
+  WebEndpoint:
+    Description: API Gateway endpoint URL for Prod stage
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
