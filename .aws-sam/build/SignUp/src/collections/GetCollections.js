@@ -2,13 +2,19 @@ const {validateToken} = require('../auth/Validate')
 const {TABLE_NAME} = require('../constants').constants;
 const dynamodb = require('aws-sdk/clients/dynamodb');
 const docClient = new dynamodb.DocumentClient();
+const {apiAuth, handleApiErrors} = require('../auth/ApiAuth');
 
 /**
  * A simple example includes a HTTP get method to get all items from a DynamoDB table.
  */
 const getCollection = async (event) => {
-    console.info('received:', event);
-    const userId = await validateToken(event.headers.Authorization);
+    let userId;
+
+    try {
+        userId = await apiAuth(event);
+    } catch (e) {
+        return handleApiErrors(e.message);
+    }
 
     const params = {
         TableName : TABLE_NAME,

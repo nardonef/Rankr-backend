@@ -85,6 +85,36 @@ Resources:
             Path: /collection
             Method: PUT
       CodeUri: AddToCollection
+  GetCollectionByName:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/getCollectionByName.handler
+      Runtime: nodejs12.x
+      Policies:
+      - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection/{collectionName}
+            Method: GET
+      CodeUri: GetCollectionByName
+  UpdateCollection:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/updateItems.handler
+      Runtime: nodejs12.x
+      Policies:
+      - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection/{collectionName}
+            Method: PUT
+      CodeUri: UpdateCollection
 Outputs:
   WebEndpoint:
     Description: API Gateway endpoint URL for Prod stage

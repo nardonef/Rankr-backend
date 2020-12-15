@@ -1,12 +1,18 @@
 const {TABLE_NAME} = require('../constants').constants;
 const dynamodb = require('aws-sdk/clients/dynamodb');
 const docClient = new dynamodb.DocumentClient();
-const {validateToken} = require('../auth/Validate')
+const {apiAuth, handleApiErrors} = require('../auth/ApiAuth');
 
 const AddToCollection = async (event) => {
-    console.info('received:', event);
     const body = JSON.parse(event.body);
-    const userId = await validateToken(event.headers.Authorization);
+    let userId, collection;
+
+    try {
+        userId = await apiAuth(event);
+        collection = await getCollection(userId, body.name);
+    } catch (e) {
+        return handleApiErrors(e.message);
+    }
 
     if (!body.item) {
         return {
@@ -17,13 +23,15 @@ const AddToCollection = async (event) => {
         }
     }
 
+    body.item.order = collection.items.length;
+
     const params = {
         TableName: TABLE_NAME,
         Key: {
             key : `COLLECTION#${userId}`,
-            name: 'Test1',
+            name: body.name,
         },
-        UpdateExpression: 'set #i = list_append(#i, :i)',
+        UpdateExpression: `set #i = list_append(#i, :i)`,
         ExpressionAttributeNames: {'#i' : 'items'},
         ExpressionAttributeValues: {
             ':i' : [body.item]
@@ -32,7 +40,7 @@ const AddToCollection = async (event) => {
 
     let response = {
         'statusCode': 200,
-        'body': ' ',
+        'body': JSON.stringify({item: body.item}),
     };
 
     try {
@@ -49,6 +57,24 @@ const AddToCollection = async (event) => {
 
     console.info(`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`);
     return response;
+}
+
+const getCollection = async (userId, name) => {
+    const dynamoResponse = await docClient.query({
+        TableName : TABLE_NAME,
+        KeyConditionExpression: "#key = :k and #name = :n",
+        ExpressionAttributeNames:{
+            "#key": "key",
+            "#name": "name",
+        },
+        ExpressionAttributeValues: {
+            ":k": `COLLECTION#${userId}`,
+            ":n": name,
+        }
+    }).promise();
+
+    console.log(dynamoResponse);
+    return dynamoResponse.Items[0];
 }
 
 exports.handler = AddToCollection;

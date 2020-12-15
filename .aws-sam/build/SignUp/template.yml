@@ -82,6 +82,34 @@ Resources:
           Properties:
             Path: /collection
             Method: PUT
+  GetCollectionByName:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/getCollectionByName.handler
+      Runtime: nodejs12.x
+      Policies:
+        - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection/{collectionName}
+            Method: GET
+  UpdateCollection:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 20
+      Handler: src/collections/updateItems.handler
+      Runtime: nodejs12.x
+      Policies:
+        - AmazonDynamoDBFullAccess
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /collection/{collectionName}
+            Method: PUT
   # DynamoDB table to store item: {id: &lt;ID&gt;, name: &lt;NAME&gt;}
 #  SampleTable:
 #    Type: AWS::Serverless::SimpleTable

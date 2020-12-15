@@ -28,11 +28,16 @@ exports.validateToken = async (token) => {
     }
     jwt.verify(token, pem, function (err, payload) {
         if (err) {
-            console.log("Invalid Token.");
-            throw new Error('Invalid token');
+            console.log(err.name);
+            throw new Error(err.name);
         } else {
             console.log("Valid Token.");
         }
     });
+    console.log(decodedJwt.payload)
+
+    if (decodedJwt.payload['cognito:username']) {
+        return decodedJwt.payload['cognito:username'];
+    }
     return decodedJwt.payload.username;
 }

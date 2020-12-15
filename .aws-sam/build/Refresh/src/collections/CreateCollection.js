@@ -1,12 +1,18 @@
 const {TABLE_NAME} = require('../constants').constants;
 const dynamodb = require('aws-sdk/clients/dynamodb');
 const docClient = new dynamodb.DocumentClient();
-const {validateToken} = require('../auth/Validate')
+const {apiAuth, handleApiErrors} = require('../auth/ApiAuth');
 
 const createCollection = async (event) => {
-    console.info('received:', event);
+    let userId;
+
+    try {
+        userId = await apiAuth(event);
+    } catch (e) {
+        return handleApiErrors(e.message);
+    }
+
     const body = JSON.parse(event.body);
-    const userId = await validateToken(event.headers.Authorization);
 
     const item = {
         key: `COLLECTION#${userId}`,
@@ -29,12 +35,8 @@ const createCollection = async (event) => {
         await docClient.put(params).promise();
     } catch (e) {
         console.log(e);
-        response = {
-            statusCode: 500,
-            error: JSON.stringify({
-                error: 'error creating item',
-            }),
-        }
+        return handleApiErrors(e.message);
+
     }
 
     console.info(`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`);
