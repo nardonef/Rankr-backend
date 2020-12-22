@@ -25,7 +25,7 @@ const getCollectionByName = async (event) => {
         },
         ExpressionAttributeValues: {
             ":k": `COLLECTION#${userId}`,
-            ":n": event.pathParameters.collectionName,
+            ":n": decodeURIComponent(event.pathParameters.collectionName),
         }
     };
 

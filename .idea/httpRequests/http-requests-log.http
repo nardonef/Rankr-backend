@@ -1,3 +1,29 @@
+GET http://127.0.0.1:3000/collection/Always%20Good
+Authorization: eyJraWQiOiJZZkhJZGsxdDVpeUxEMDk3dFpGNWZxemUzRnFYXC9cL09VdmU0UVpUMFhtWEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0MTFkMzlkMy00ZTcyLTQ1YWMtODA4Yy0yZjIyZWQwMWM4OWIiLCJldmVudF9pZCI6ImE5MjZhM2MxLTQ4YmQtNGQxMy1iMzNkLTJlNTM2Njg5YTQxMSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MDg2MDE3OTYsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3pjandZQnlLNiIsImV4cCI6MTYwODYwNTM5NiwiaWF0IjoxNjA4NjAxNzk2LCJqdGkiOiJjMjcyYzEyNi03Yjk4LTQ4ZDctYWIzOS03YzlkYjkzNWMwZWEiLCJjbGllbnRfaWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsInVzZXJuYW1lIjoiNDExZDM5ZDMtNGU3Mi00NWFjLTgwOGMtMmYyMmVkMDFjODliIn0.fV9CX6u_ZFp2wf1pjgTiQwcE2FR7fEB6quaxKxhc3N7UtJan-xm5aSrKmTEBMjV21qaCMm7WGBdwMK9FvDMKdHeNhFz2qcgGif98awRLYvjQCiigy8Hb1RkTxUylmgsdq6v8V846zhvQ9kgiX2iRE1tLRGCTLpvsRW9CxKY24TIEYddz88rauAWphlXpTt-z1UmKO7hGJhGDCp7yYbPyUoOz7GEo2L_g9RW3y7fjxcpyudMgnBmVzQ1SdtfTYSbUTTKpKLfTrbqSAHRFnyQDqH3htBsL76flY59YnSojN2pmaZHYCFpFdIS2CwKltz9axpc3uWHk-FRtwok2F5IF_g
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+X-User-Email: franknardone95@gmail.com
+
+{"items": [{"business_status": "OPERATIONAL", "formatted_address": "33 Lecount Pl, New Rochelle, NY 10801, United States", "geometry": {}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png", "name": "Buffalo Wild Wings", "opening_hours": {"open_now": true}, "order": 2, "photos": [], "place_id": "ChIJu4yAAZGNwokROoDd2w9nGAM", "plus_code": {"compound_code": "W669+GV New Rochelle, New York", "global_code": "87G8W669+GV"}, "price_level": 2, "rating": 3.6, "reference": "ChIJu4yAAZGNwokROoDd2w9nGAM", "types": ["meal_takeaway", "bar", "restaurant", "food", "point_of_interest", "establishment"], "user_ratings_total": 1254}, {"business_status": "OPERATIONAL", "formatted_address": "224 Washington St, Perth Amboy, NJ 08861, United States", "geometry": {"location": [], "viewport": []}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png", "name": "FSG New Jersey", "opening_hours": {"open_now": false}, "order": 0, "photos": [], "place_id": "ChIJ52PpxH7Kw4kRZSmhE41_lcw", "plus_code": {"compound_code": "GP8J+23 Perth Amboy, New Jersey", "global_code": "87G7GP8J+23"}, "rating": 4.7, "reference": "ChIJ52PpxH7Kw4kRZSmhE41_lcw", "types": ["electrician", "point_of_interest", "establishment"], "user_ratings_total": 6}, {"business_status": "OPERATIONAL", "formatted_address": "21-76 31st St, Astoria, NY 11105, United States", "geometry": {"location": [], "viewport": []}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png", "name": "Trattoria L'incontro", "opening_hours": {"open_now": true}, "order": 0, "photos": [], "place_id": "ChIJFb-9qGdfwokRi14Wngdo12o", "plus_code": {"compound_code": "Q3GQ+HQ New York", "global_code": "87G8Q3GQ+HQ"}, "price_level": 3, "rating": 4.7, "reference": "ChIJFb-9qGdfwokRi14Wngdo12o", "types": ["restaurant", "food", "point_of_interest", "establishment"], "user_ratings_total": 867}]}
+
+<> 2020-12-21T092140.200.json
+
+###
+
+GET http://127.0.0.1:3000/collection/Always%20Good
+Authorization: eyJraWQiOiJPb2VtMjc0N0NPUWxydGpoUFwvdDFGSUxnTFBOUHVkVVJVenVxM21pa1ZpZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1MmY4MDIwZS1kZGRkLTRjNGEtOTQzMS1kZjc2NjYxYWUwNDgiLCJhdWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZXZlbnRfaWQiOiJiM2EyYzFiNC02ZTViLTQ1OTktYTBhZS0wOGQwMjNiNmZmNmQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYwNjI1OTc0NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfemNqd1lCeUs2IiwiY29nbml0bzp1c2VybmFtZSI6IjUyZjgwMjBlLWRkZGQtNGM0YS05NDMxLWRmNzY2NjFhZTA0OCIsImV4cCI6MTYwNjg4MzczNSwiaWF0IjoxNjA2ODgwMTM1LCJlbWFpbCI6IkZyYW5rbmFyZG9uOTVAZ21haWwuY29tIn0.T7n4NZAHoySUfIQB1bWanK74QQPKuFrGgW65MLwDL7mbWiS13LPhQ0h_TiW3qz3pdbR_pO8FHuQ4gYrNyIGtN12EU1ZWMOJZMuyyjcganAn-rX31FdYhdHHpn6gksVfI6aoR6vbzZ5lsVKoTRh1GgYcEhf1HDHI_Bxl4VLYH8CH_QUWLsLWZaDLO-4_hhUh6FEVN61I7kUMfwaLqEyOVxWxK9Db-0pQ6wN3YFg6ZT4j8xC69XL3O3n08yXjliOWOcWpLjplR6U9UT1h4qGTy5d5oruZWB00j-nmknvhkQhfsNuNbfEqF9EGiAb6lnvBtGMwOfeUFqYfUsslHcL5nzg
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+X-User-Email: franknardone95@gmail.com
+
+{"items": [{"business_status": "OPERATIONAL", "formatted_address": "33 Lecount Pl, New Rochelle, NY 10801, United States", "geometry": {}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png", "name": "Buffalo Wild Wings", "opening_hours": {"open_now": true}, "order": 2, "photos": [], "place_id": "ChIJu4yAAZGNwokROoDd2w9nGAM", "plus_code": {"compound_code": "W669+GV New Rochelle, New York", "global_code": "87G8W669+GV"}, "price_level": 2, "rating": 3.6, "reference": "ChIJu4yAAZGNwokROoDd2w9nGAM", "types": ["meal_takeaway", "bar", "restaurant", "food", "point_of_interest", "establishment"], "user_ratings_total": 1254}, {"business_status": "OPERATIONAL", "formatted_address": "224 Washington St, Perth Amboy, NJ 08861, United States", "geometry": {"location": [], "viewport": []}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png", "name": "FSG New Jersey", "opening_hours": {"open_now": false}, "order": 0, "photos": [], "place_id": "ChIJ52PpxH7Kw4kRZSmhE41_lcw", "plus_code": {"compound_code": "GP8J+23 Perth Amboy, New Jersey", "global_code": "87G7GP8J+23"}, "rating": 4.7, "reference": "ChIJ52PpxH7Kw4kRZSmhE41_lcw", "types": ["electrician", "point_of_interest", "establishment"], "user_ratings_total": 6}, {"business_status": "OPERATIONAL", "formatted_address": "21-76 31st St, Astoria, NY 11105, United States", "geometry": {"location": [], "viewport": []}, "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png", "name": "Trattoria L'incontro", "opening_hours": {"open_now": true}, "order": 0, "photos": [], "place_id": "ChIJFb-9qGdfwokRi14Wngdo12o", "plus_code": {"compound_code": "Q3GQ+HQ New York", "global_code": "87G8Q3GQ+HQ"}, "price_level": 3, "rating": 4.7, "reference": "ChIJFb-9qGdfwokRi14Wngdo12o", "types": ["restaurant", "food", "point_of_interest", "establishment"], "user_ratings_total": 867}]}
+
+<> 2020-12-21T092104.401.json
+
+###
+
 POST http://127.0.0.1:3000/refresh
 Authorization: eyJraWQiOiJZZkhJZGsxdDVpeUxEMDk3dFpGNWZxemUzRnFYXC9cL09VdmU0UVpUMFhtWEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI1MmY4MDIwZS1kZGRkLTRjNGEtOTQzMS1kZjc2NjYxYWUwNDgiLCJldmVudF9pZCI6ImFjM2FiN2NmLTg4MjItNGQ0MC1iNDBjLWQwYWEyMjgzYjIzYSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MDYwNzY1MDAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3pjandZQnlLNiIsImV4cCI6MTYwNjA4MDEwMCwiaWF0IjoxNjA2MDc2NTAwLCJqdGkiOiJiZGIzNWU3MC03YTBjLTQzZDktODllYi0wYjdiNjQ0YTJiNDciLCJjbGllbnRfaWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsInVzZXJuYW1lIjoiNTJmODAyMGUtZGRkZC00YzRhLTk0MzEtZGY3NjY2MWFlMDQ4In0.RTwzFozPf7Wn5oJNeOjxepegALT3Qkk0ecjQATEnZvOztm1mHNQSwzyHaOxpcJLyFTZJu56UgS3Yvo5utcBAdwsNToQE7VB1ojBGXI8pOdcFr8tQRu3_oWX5qckgJoVyhrE6CDrfjKPcrKZmjYe2fLnKWe-G4FJ3fhn0gcB63U0m27Ul7reqzKLablTCi7sl9AZttk_uQDewJqWMRWwqwXxZ_IsUwlhjr_cVuRMTX-kfhnNP8Y_IL4xviuRwNZqNZhIniSuf2OnW-VNWfkKbPyAmfM5lVZJ31_FZbt36AV_9C3ml4ht_FF6D0U4tI6a_3vw9L3cWLyEDSeeGZy6vRA
 Accept: */*
@@ -605,28 +631,6 @@ Content-Type: application/json
 { "token": "eyJraWQiOiJZZkhJZGsxdDVpeUxEMDk3dFpGNWZxemUzRnFYXC9cL09VdmU0UVpUMFhtWEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2YTljM2UwNy1kYzQ2LTQ0MjEtODJhNy1mNWM0ODc5NDU1YzEiLCJldmVudF9pZCI6ImRlNWI2MjU1LTkyMDgtNDQxMC1iOWEwLTc0MWIwN2MyNjYyMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MDM2Nzc2NDgsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3pjandZQnlLNiIsImV4cCI6MTYwMzY4MTI0OCwiaWF0IjoxNjAzNjc3NjQ4LCJqdGkiOiI3OWMyY2U2My0wZjg5LTQ2MDUtODY0ZS01MDgzMjlmMGUyM2IiLCJjbGllbnRfaWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsInVzZXJuYW1lIjoiNmE5YzNlMDctZGM0Ni00NDIxLTgyYTctZjVjNDg3OTQ1NWMxIn0.OpY3nGN1dg3KcQ5Qh-eGm1TC6RQS1DKWTpibYAN_Un52NTotEA1alXC_b4FkfcmvntDgsuhsi53XyIpUI5RVIK6iXFrvfFDZsnW6IN7-XdSgw_yAo2ZXU4L5WqYBhkzSNADseg5_qHgb62_dOrs9DjqWxF8vzFcS7pmlWP5JGdPzGV53n2t9YUCcF4z4xL9RIXV8lWMH-A776VCt1nV8GSmncfo7ZlDjca23zWt8RDpsP863WjMMuBeBNK3uAW-NtjKQa5cLgZAmuQ3IhvAD9SKO4wgjwNtZXt3ID_XAqaC8N2QDq_jduVlkficlcMNsig5TxKZMMYlMgtlPa3TK6g"}
 
 <> 2020-10-25T103138.502.json
-
-###
-
-POST http://127.0.0.1:3000/collection
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{ "token": "eyJraWQiOiJZZkhJZGsxdDVpeUxEMDk3dFpGNWZxemUzRnFYXC9cL09VdmU0UVpUMFhtWEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2YTljM2UwNy1kYzQ2LTQ0MjEtODJhNy1mNWM0ODc5NDU1YzEiLCJldmVudF9pZCI6ImRlNWI2MjU1LTkyMDgtNDQxMC1iOWEwLTc0MWIwN2MyNjYyMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MDM2Nzc2NDgsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3pjandZQnlLNiIsImV4cCI6MTYwMzY4MTI0OCwiaWF0IjoxNjAzNjc3NjQ4LCJqdGkiOiI3OWMyY2U2My0wZjg5LTQ2MDUtODY0ZS01MDgzMjlmMGUyM2IiLCJjbGllbnRfaWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsInVzZXJuYW1lIjoiNmE5YzNlMDctZGM0Ni00NDIxLTgyYTctZjVjNDg3OTQ1NWMxIn0.OpY3nGN1dg3KcQ5Qh-eGm1TC6RQS1DKWTpibYAN_Un52NTotEA1alXC_b4FkfcmvntDgsuhsi53XyIpUI5RVIK6iXFrvfFDZsnW6IN7-XdSgw_yAo2ZXU4L5WqYBhkzSNADseg5_qHgb62_dOrs9DjqWxF8vzFcS7pmlWP5JGdPzGV53n2t9YUCcF4z4xL9RIXV8lWMH-A776VCt1nV8GSmncfo7ZlDjca23zWt8RDpsP863WjMMuBeBNK3uAW-NtjKQa5cLgZAmuQ3IhvAD9SKO4wgjwNtZXt3ID_XAqaC8N2QDq_jduVlkficlcMNsig5TxKZMMYlMgtlPa3TK6g"}
-
-<> 2020-10-25T102343.200.json
-
-###
-
-POST http://127.0.0.1:3000/collection
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{ "token": "eyJraWQiOiJZZkhJZGsxdDVpeUxEMDk3dFpGNWZxemUzRnFYXC9cL09VdmU0UVpUMFhtWEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2YTljM2UwNy1kYzQ2LTQ0MjEtODJhNy1mNWM0ODc5NDU1YzEiLCJldmVudF9pZCI6ImRlNWI2MjU1LTkyMDgtNDQxMC1iOWEwLTc0MWIwN2MyNjYyMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MDM2Nzc2NDgsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3pjandZQnlLNiIsImV4cCI6MTYwMzY4MTI0OCwiaWF0IjoxNjAzNjc3NjQ4LCJqdGkiOiI3OWMyY2U2My0wZjg5LTQ2MDUtODY0ZS01MDgzMjlmMGUyM2IiLCJjbGllbnRfaWQiOiI2czIybXJlNDFyMHMxZ3E3OGlyMHJhMGxpciIsInVzZXJuYW1lIjoiNmE5YzNlMDctZGM0Ni00NDIxLTgyYTctZjVjNDg3OTQ1NWMxIn0.OpY3nGN1dg3KcQ5Qh-eGm1TC6RQS1DKWTpibYAN_Un52NTotEA1alXC_b4FkfcmvntDgsuhsi53XyIpUI5RVIK6iXFrvfFDZsnW6IN7-XdSgw_yAo2ZXU4L5WqYBhkzSNADseg5_qHgb62_dOrs9DjqWxF8vzFcS7pmlWP5JGdPzGV53n2t9YUCcF4z4xL9RIXV8lWMH-A776VCt1nV8GSmncfo7ZlDjca23zWt8RDpsP863WjMMuBeBNK3uAW-NtjKQa5cLgZAmuQ3IhvAD9SKO4wgjwNtZXt3ID_XAqaC8N2QDq_jduVlkficlcMNsig5TxKZMMYlMgtlPa3TK6g"}
-
-<> 2020-10-25T102216.200.json
 
 ###
 
